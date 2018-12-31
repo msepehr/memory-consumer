@@ -1,8 +1,8 @@
 # Memory Consumer
 
 This project is an illustration of the following article:
-[Docker and Java: Why My App Is OOMKilled
-](https://dzone.com/articles/why-my-java-application-is-oomkilled)
+[Docker and Java: Why My App Is OOMKilled](https://dzone.com/articles/why-my-java-application-is-oomkilled).
+
 It contains a Java class and related Docker image and k8s versions.
 The scripts are managed by Makefile executables.
 
