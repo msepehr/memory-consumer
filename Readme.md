@@ -3,7 +3,7 @@
 This project is an illustration of the following article:
 [Docker and Java: Why My App Is OOMKilled](https://dzone.com/articles/why-my-java-application-is-oomkilled).
 
-It contains a Java class and related Docker image and k8s versions.
+It contains a Java class and related Docker image and Kubernetes versions.
 The scripts are managed by Makefile executables.
 
 ## Run a local registry
