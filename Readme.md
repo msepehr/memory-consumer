@@ -32,6 +32,14 @@ make deployv2
 make allv2
 ```
 
+### Cmd v3
+
+```bash
+make cleanv3
+make deployv3
+make allv3
+```
+
 ## Test logs
 
 ```bash
