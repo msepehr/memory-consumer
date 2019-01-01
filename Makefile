@@ -19,8 +19,10 @@ tag:
 tagrm:
 	docker image remove localhost:5000/memory_consumer:$(TAG)
 
+##### K8S Version 1 #####
 krmv1:
 	kubectl delete -f k8s.v1/
+	sleep 10
 
 kapplyv1:
 	kubectl apply -f k8s.v1/
@@ -31,8 +33,10 @@ deployv1: compile build tag kapplyv1
 
 allv1: cleanv1 deployv1
 
+##### K8S Version 2 #####
 krmv2:
 	kubectl delete -f k8s.v2/
+	sleep 10
 
 kapplyv2:
 	kubectl apply -f k8s.v2/
@@ -43,8 +47,10 @@ deployv2: compile build tag kapplyv2
 
 allv2: cleanv2 deployv2
 
+##### K8S Version 3 #####
 krmv3:
 	kubectl delete -f k8s.v3/
+	sleep 10
 
 kapplyv3:
 	kubectl apply -f k8s.v3/
@@ -55,6 +61,7 @@ deployv3: compile build tag kapplyv3
 
 allv3: cleanv3 deployv3
 
+##### Show result #####
 logs:
 	kubectl logs memory-consumer
 
