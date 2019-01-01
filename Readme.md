@@ -16,10 +16,20 @@ make registery
 
 ## Build Java Jar & Register Docker image & deploy k8s
 
+### Cmd v1
+
 ```bash
-make clean
-make deploy
-make all
+make cleanv1
+make deployv1
+make allv1
+```
+
+### Cmd v2
+
+```bash
+make cleanv2
+make deployv2
+make allv2
 ```
 
 ## Test logs
@@ -27,3 +37,10 @@ make all
 ```bash
 make logs
 ```
+
+## References
+
+[Deploy a registry server](https://docs.docker.com/v17.09/registry/deploying/#copy-an-image-from-docker-hub-to-your-registry
+)
+
+[Kubernetes Lab for Java Developers](https://htmlpreview.github.io/?https://github.com/redhat-developer-demos/kubernetes-lab/blob/master/lab/readme.html)

@@ -12,4 +12,7 @@ spec:
         memory: "64Mi"
       limits:
         memory: "256Mi"
+    env:
+    - name: JVM_OPTS
+      value: "-Xms64M -Xmx256M"
   restartPolicy: Never

@@ -12,4 +12,7 @@ spec:
         memory: "64Mi"
       limits:
         memory: "256Mi"
+    env:
+    - name: JVM_OPTS
+      value: "-XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -XX:MaxRAMFraction=1 -Xms64M"
   restartPolicy: Never
