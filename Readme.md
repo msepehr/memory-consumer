@@ -5,10 +5,10 @@ This project is an illustration of the following article:
 
 It contains a Java class and related Docker image and Kubernetes versions.
 The scripts are managed by Makefile executables.
+Other interesting article: https://stackoverflow.com/questions/49364568/analyze-kubernetes-pod-oomkilled
 
 ## Run a local registry
 
-Use a command like the following to start the registry container:
 
 ```bash
 make registery
@@ -40,7 +40,10 @@ make logs
 
 ## References
 
+[Analyze Kubernetes pod OOMKilled](https://stackoverflow.com/questions/49364568/analyze-kubernetes-pod-oomkilled)
 [Deploy a registry server](https://docs.docker.com/v17.09/registry/deploying/#copy-an-image-from-docker-hub-to-your-registry
 )
 
 [Kubernetes Lab for Java Developers](https://htmlpreview.github.io/?https://github.com/redhat-developer-demos/kubernetes-lab/blob/master/lab/readme.html)
+
+
