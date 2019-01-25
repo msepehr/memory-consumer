@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MemoryConsumer",
+            "request": "launch",
+            "mainClass": "com.oom.MemoryConsumer"
+        }
+    ]
+}

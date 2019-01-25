@@ -5,11 +5,13 @@ metadata:
 spec:
   containers:
   - name: memory-consumer-container
-    image: localhost:5000/memory_consumer:0.95
-    imagePullPolicy: Never
+    image: msepehr/oom:4.1
     resources:
       requests:
-        memory: "64Mi"
+        memory: "6000Mi"
       limits:
-        memory: "256Mi"
-  restartPolicy: Never
+        memory: "6000Mi"
+    env:
+    - name: MEM_TEST
+      value: "10000"
+        

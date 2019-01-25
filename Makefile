@@ -1,5 +1,5 @@
-TAG = 0.95
-
+TAG = 4.1
+TIMER = 5
 registery:
 	docker run -d -p 5000:5000 --restart=always --name registry registry:2
 
@@ -16,13 +16,18 @@ tag:
 	docker build -t localhost:5000/memory_consumer:$(TAG) . 
 	docker push localhost:5000/memory_consumer:$(TAG)
 
+tagdockerhub:
+	docker build -t localhost:5000/memory_consumer:$(TAG) . 
+	docker tag localhost:5000/memory_consumer:$(TAG) msepehr/oom:$(TAG)
+	docker push  msepehr/oom:$(TAG)
+
 tagrm:
 	docker image remove localhost:5000/memory_consumer:$(TAG)
 
 ##### K8S Version 1 #####
 krmv1:
 	kubectl delete -f k8s.v1/
-	sleep 10
+	sleep $(TIMER)
 
 kapplyv1:
 	kubectl apply -f k8s.v1/
@@ -36,7 +41,7 @@ allv1: cleanv1 deployv1
 ##### K8S Version 2 #####
 krmv2:
 	kubectl delete -f k8s.v2/
-	sleep 10
+	sleep $(TIMER)
 
 kapplyv2:
 	kubectl apply -f k8s.v2/
@@ -50,7 +55,7 @@ allv2: cleanv2 deployv2
 ##### K8S Version 3 #####
 krmv3:
 	kubectl delete -f k8s.v3/
-	sleep 10
+	sleep $(TIMER)
 
 kapplyv3:
 	kubectl apply -f k8s.v3/
