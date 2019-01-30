@@ -10,7 +10,7 @@ public class MemoryConsumer {
             try {
                 Thread.sleep(3000);
             } catch (Exception e) {
-                throw RuntimeException(e);
+                throw new RuntimeException(e);
             }
             int memTestInt = 1;
             if(memTest != null && memTest.length() != 0){
